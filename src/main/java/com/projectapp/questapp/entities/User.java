@@ -21,7 +21,7 @@ public class User {
 //    @GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name = "id", columnDefinition = "SERIAL")
 	Long id;
 	
 	@Column(name="user_name")

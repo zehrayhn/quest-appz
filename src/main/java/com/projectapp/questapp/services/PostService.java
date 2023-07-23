@@ -11,12 +11,14 @@ import com.projectapp.questapp.repos.PostRepository;
 import com.projectapp.questapp.requests.PostCreateRequest;
 import com.projectapp.questapp.responses.LikeResponse;
 import com.projectapp.questapp.responses.PostResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.projectapp.questapp.entities.User;
 import lombok.AllArgsConstructor;
 
+@Slf4j
 @Service
 public class PostService {
  
@@ -37,6 +39,7 @@ public class PostService {
 	this.likeService=likeService;
 	}
 	public List<PostResponse> getAllPosts(Optional<Long> userId) {
+		log.debug("getAllPosts() method is called with userId: {}", userId);
 		List<Post> list;
 		if(userId.isPresent())
 			list=postRepository.findByUserId(userId.get());

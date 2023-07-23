@@ -27,7 +27,7 @@ public class UserService {
 
 	public User saveOneUser(User newUser) {
 		// TODO Auto-generated method stub
-		return this.userRepository.save(newUser);
+		return userRepository.save(newUser);
 	}
 
 	public User getOneUserById(Long userId) {
@@ -59,5 +59,8 @@ public class UserService {
 		
 	}
 
-	
+
+    public User getOneUserByUserName(String userName) {
+		return userRepository.findByUserName(userName);
+    }
 }

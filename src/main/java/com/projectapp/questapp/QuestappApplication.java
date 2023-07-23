@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+
 //import springfox.documentation.builders.PathSelectors;
 //import springfox.documentation.builders.RequestHandlerSelectors;
 //import springfox.documentation.spi.DocumentationType;
@@ -26,14 +27,15 @@ public class QuestappApplication {
 	}
 
 	
-    
-//    public Docket api() { 
-//        return new Docket(DocumentationType.SWAGGER_2)  
-//          .select()                                  
-//          .apis(RequestHandlerSelectors.basePackage("com.projectapp.questapp"))              
-//          .paths(PathSelectors.any())              
-//          .build();                                           
-//    }
+
+//	@Bean
+   // public Docket api() {
+       // return new Docket(DocumentationType.SWAGGER_2)
+        //  .select()
+      //   .apis(RequestHandlerSelectors.basePackage("com.projectapp.questapp"))
+      //   .paths(PathSelectors.any())
+    //     .build();
+  //  }
 
 
 }
